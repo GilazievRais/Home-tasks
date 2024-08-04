@@ -1,0 +1,5 @@
+count_of_hw = 12
+hours = 1.5
+name_of_course = "Python"
+print('Курс: ' + name_of_course + ', всего задач: ' + str(count_of_hw) + ', затрачено часов: ' + str(hours) + ', среднее время выполнения: ' + str(hours / count_of_hw) + ' часа.')
+print('Курс:', name_of_course, ', всего задач:', count_of_hw, ', затрачено часов:', hours, ',среднее время выполнения:', hours / count_of_hw, ' часа.')
