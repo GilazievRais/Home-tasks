@@ -1,0 +1,14 @@
+my_dict = {'Rais': 1989, 'Alina': 1991}
+print(my_dict)
+print(my_dict['Rais'])
+print(my_dict.get('Tagir', 'Такого ключа нет!'))
+my_dict.update({'Tagir': 2016, 'Arslan': 2019})
+print(my_dict.pop('Alina'))
+print(my_dict)
+
+my_set = {1, 4, 1, 'str', (1, 2, 6), 'str'}
+print(set(my_set))
+my_set.add(17)
+my_set.add('Hello')
+my_set.discard(4)
+print(my_set)
