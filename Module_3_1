@@ -1,0 +1,24 @@
+calls = 0
+def count_calls():
+    global calls
+    calls += 1
+
+def string_info(string):
+    kort = () + (len(string), string.upper(), string.lower())
+    count_calls()
+    return kort
+
+def is_contains(string, list_to_search):
+    count_calls()
+    if string in list_to_search:
+        return True
+    else: return False
+
+
+print(string_info("Малина"))
+print(string_info("Клубника"))
+print(string_info("Черешня"))
+print(is_contains("малина", ['малина', 'клубника', 'черешня', 'яблоко']))
+print(is_contains("кирпич", ['песок', ',бетон', 'черешня', 'яблоко']))
+
+print('Функций использовано:',calls,' раз')
