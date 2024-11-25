@@ -1,0 +1,33 @@
+from pprint import pprint
+
+def custom_write(file_name, strings):
+    strings_positions = {}
+
+    with open(file_name, 'w', encoding='utf-8') as file:
+        for line_number, string in enumerate(strings, start=1):
+            # Получаем текущую позицию в файле перед записью строки
+            byte_position = file.tell()
+
+            # Записываем строку в файл, добавляя символ новой строки
+            file.write(string + '\n')
+
+            # Заполняем словарь: ключ - кортеж (номер строки, байт начала строки), значение - строка
+            strings_positions[(line_number, byte_position)] = string
+
+    # Возвращаем словарь с позициями строк
+    return strings_positions
+
+
+# Пример использования функции
+info = [
+    'Text for tell.',
+    'Используйте кодировку utf-8.',
+    'Because there are 2 languages!',
+    'Спасибо!'
+]
+
+result = custom_write('test.txt', info)
+
+# Вывод результата на консоль
+for elem in result.items():
+    print(elem)
